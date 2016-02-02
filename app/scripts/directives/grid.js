@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('jabraApp').directive('grid', function() {
+angular.module('angularTDD').directive('grid', function() {
   return {
     restrict: 'E',
     templateUrl: 'views/directive-grid.html',

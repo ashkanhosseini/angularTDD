@@ -13,7 +13,7 @@ describe('directive: grid', function() {
                       </grid>\
                     </div>';
 
-  beforeEach(module('jabraApp'));
+  beforeEach(module('angularTDD'));
 
   beforeEach(inject(function($rootScope, $compile) {
       scope = $rootScope.$new();

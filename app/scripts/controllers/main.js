@@ -2,12 +2,12 @@
 
 /**
  * @ngdoc function
- * @name jabraApp.controller:MainCtrl
+ * @name angularTDD.controller:MainCtrl
  * @description
  * # MainCtrl
- * Controller of the jabraApp
+ * Controller of the angularTDD
  */
-angular.module('jabraApp')
+angular.module('angularTDD')
   .controller('MainCtrl', ['products', '_', function(products,   _) {
     var vm = this,
       allProducts;

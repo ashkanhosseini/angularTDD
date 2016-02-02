@@ -5,7 +5,7 @@
 describe('Constants: lodash', function(){
   var lodash;
 
-  beforeEach(module('jabraApp'));
+  beforeEach(module('angularTDD'));
   beforeEach(inject(function(_){
     lodash = _;
   }));

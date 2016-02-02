@@ -6,7 +6,7 @@ describe('Controller: MainCtrl', function() {
     timeout;
 
   // load the controller's module
-  beforeEach(module('jabraApp'));
+  beforeEach(module('angularTDD'));
 
   // Initialize the controller and a mock scope
   beforeEach(inject(function($controller, $rootScope, $q, $timeout) {

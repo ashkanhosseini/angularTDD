@@ -15,7 +15,7 @@ describe('Service: products', function() {
       _id: 'ac7'
     };
 
-  beforeEach(module('jabraApp', function(storageProvider) {
+  beforeEach(module('angularTDD', function(storageProvider) {
     storageProvider.setNamespace(ns);
   }));
 

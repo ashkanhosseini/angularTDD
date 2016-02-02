@@ -2,12 +2,12 @@
 
 /**
  * @ngdoc function
- * @name jabraApp.controller:AboutCtrl
+ * @name angularTDD.controller:AboutCtrl
  * @description
  * # AboutCtrl
- * Controller of the jabraApp
+ * Controller of the angularTDD
  */
-angular.module('jabraApp')
+angular.module('angularTDD')
   .controller('AboutCtrl', function () {
 
 

@@ -4,7 +4,7 @@ describe('Service: storage', function() {
   var storage,
     ns = 'jabraTest';
 
-  beforeEach(module('jabraApp', function(storageProvider) {
+  beforeEach(module('angularTDD', function(storageProvider) {
     storageProvider.setNamespace(ns);
   }));
 

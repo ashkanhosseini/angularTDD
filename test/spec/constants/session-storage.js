@@ -5,7 +5,7 @@
 describe('Constants: sessionStorage', function(){
   var sessionStorage;
 
-  beforeEach(module('jabraApp'));
+  beforeEach(module('angularTDD'));
   beforeEach(inject(function(_sessionStorage_){
     sessionStorage = _sessionStorage_;
   }));

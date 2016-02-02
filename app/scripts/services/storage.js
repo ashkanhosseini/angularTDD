@@ -1,12 +1,12 @@
 'use strict';
 /**
  * @ngdoc function
- * @name jabraApp.provider:storage
+ * @name angularTDD.provider:storage
  * @description stores infromatoin in session storage
  * # storageProvider
- * provider of the jabraApp
+ * provider of the angularTDD
  */
-angular.module('jabraApp').provider('storage', function() {
+angular.module('angularTDD').provider('storage', function() {
   var ns = 'storageNs';
 
   this.setNamespace = function(namespace) {

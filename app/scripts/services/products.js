@@ -2,7 +2,7 @@
 /**
  * Created by Ashkov on 29.09.2015.
  */
-angular.module('jabraApp').service('products', ['$q', 'storage', '_', function($q, storage, _) {
+angular.module('angularTDD').service('products', ['$q', 'storage', '_', function($q, storage, _) {
   var cart = [];
   this.get = function() {
     return $q.when(data);

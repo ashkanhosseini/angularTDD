@@ -2,14 +2,14 @@
 
 /**
  * @ngdoc overview
- * @name jabraApp
+ * @name angularTDD
  * @description
- * # jabraApp
+ * # angularTDD
  *
  * Main module of the application.
  */
 var ngApp = angular
-  .module('jabraApp', [
+  .module('angularTDD', [
     'ngAnimate',
     'ngRoute'
   ]);
@@ -32,5 +32,5 @@ ngApp.config(function ($routeProvider) {
   });
 
   ngApp.config(function (storageProvider) {
-    storageProvider.setNamespace('jabraApp');
+    storageProvider.setNamespace('angularTDD');
   });
