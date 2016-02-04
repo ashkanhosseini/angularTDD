@@ -7,9 +7,10 @@
       </tr>
     </thead>
     <tbody>
-      <tr ng-repeat="item in data">
+      <tr ng-repeat="row in data">
         <td ng-repeat="column in columns">
-          {{item[column.propertyName]}}
+          <span ng-if="column.expression" compile="column.expression"></span>
+          <span ng-if="!column.expression">{{row[column.propertyName]}}</span>
         </td>
       </tr>
     </tbody>

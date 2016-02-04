@@ -18,7 +18,7 @@ angular.module('angularTDD').directive('grid', function() {
   };
 })
 
-.directive('column', function() {
+.directive('column', ['$sce', function($sce) {
   return {
     require: '^grid',
     restrict: 'E',
@@ -26,14 +26,16 @@ angular.module('angularTDD').directive('grid', function() {
     scope: {
       propertyName: "@",
       isEditable: "=",
-      header: "@"
+      header: "@",
+      expression: "="
     },
-    link: function(scope, element, attrs, gridCtrl) {
+    link: function(scope, element, attrs, gridCtrl ) {
       gridCtrl.addColumn({
         propertyName: scope.propertyName,
         isEditable: scope.isEditable,
-        header: scope.header
+        header: scope.header,
+        expression: scope.expression
       });
     }
   };
-});
+}]);
