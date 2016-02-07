@@ -13,12 +13,12 @@ describe('directive: grid', function() {
       surname: 'Vedder'
     }],
     template = '<div>\
-                      <grid data="data" is-editable="false">\
+                      <grid data="data" is-editable="false" table-classes="my-class">\
                         <column property-name="name" is-editable="true" header="Name" expression="nameTemplate"></column>\
                         <column property-name="surname" is-editable="false" header="Surname"></column>\
                       </grid>\
                     </div>';
-                    
+
   beforeEach(module('angularTDD'));
 
   beforeEach(inject(function($rootScope, $compile) {
@@ -76,5 +76,9 @@ describe('directive: grid', function() {
     spyOn(scope, 'dummyFunc');
     elm.find('.template-container').triggerHandler('click');
     expect(scope.dummyFunc).toHaveBeenCalled();
+  });
+
+  it('should add custome classes to table', function(){
+    expect(elm.find('table:first')[0].className).toBe('my-class');
   });
 });

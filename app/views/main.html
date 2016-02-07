@@ -3,38 +3,12 @@
   <button type="button" class="btn btn-default" ng-click="main.setMostExpensiveThree()">3 most expensive</button>
   <button type="button" class="btn btn-default" ng-click="main.resetFilters()">All</button>
   <div >
-    <table class="table table-hover">
-      <thead>
-        <tr>
-          <th>
-            Name
-          </th>
-          <th>
-            Waranty Years
-          </th>
-          <th>
-            Color
-          </th>
-          <th>
-            Price
-          </th>
-          <th>
-          </th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr ng-repeat="product in main.products">
-          <td ng-bind="product.name"></td>
-          <td ng-bind="product.warranty_years"></td>
-          <td ng-bind="product.color"></td>
-          <td ng-bind="product.price | currency "></td>
-          <td>
-            <button ng-if="!main.isInCart(product)" ng-click="main.addToCart(product)" type="button"  class="btn btn-primary">Add to cart</button>
-            <button ng-if="main.isInCart(product)" ng-click="main.removeFromCart(product)" type="button"  class="btn btn-danger">Remove from cart</button>
-          </td>
-        </tr>
-      </tbody>
-    </table>
-
+    <grid data="main.products" table-classes="table table-hover" is-editable="false">
+      <column property-name="name" header="Name"></column>
+      <column property-name="warranty_years" header="Waranty Years"></column>
+      <column property-name="color" header="Color"></column>
+      <column property-name="price" header="Price" expression="row.price | currency "></column>
+      <column expression="main.addToCartTemplate" ></column>
+    </grid>
   </div>
 </div>

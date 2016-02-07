@@ -33,6 +33,10 @@ angular.module('angularTDD')
     vm.removeFromCart = products.removeFromCart;
     vm.isInCart = products.isInCart;
 
+    vm.addToCartTemplate = '<button ng-show="!main.isInCart(row)" ng-click="main.addToCart(row)" type="button"  class="btn btn-primary" >Add to cart</button>'+
+                            '<button ng-show="main.isInCart(row)" ng-click="main.removeFromCart(row)" type="button"  class="btn btn-danger">Remove from cart</button>';
+
+    /*Private methods*/
     function sortProducts(order) {
       var sorted = _.orderBy(allProducts, 'price', order);
       if (sorted) {
